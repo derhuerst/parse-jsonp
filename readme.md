@@ -1,5 +1,7 @@
 # parse-jsonp
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/derhuerst/parse-jsonp.svg)](https://greenkeeper.io/)
+
 **Get the payload of a [JSONP](https://en.wikipedia.org/wiki/JSONP) response** in Node.js and in the browser. No `fetch`/AJAX logic in here.
 
 [![npm version](https://img.shields.io/npm/v/parse-jsonp.svg)](https://www.npmjs.com/package/parse-jsonp)
