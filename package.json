@@ -30,12 +30,31 @@
 	"devDependencies": {
 		"babel-cli": "^6.24.1",
 		"babel-preset-es2015": "^6.24.1",
+		"babelify": "^7.3.0",
+		"browserify": "^14.4.0",
+		"chutney": "^0.1.0",
+		"is-in-browser": "^1.1.3",
 		"tap-min": "^1.2.1",
-		"tape": "^4.6.3"
+		"tape": "^4.7.0"
+	},
+	"browserify": {
+		"transform": [
+			[
+				"babelify",
+				{
+					"presets": [
+						"es2015"
+					],
+					"global": true
+				}
+			]
+		]
 	},
 	"scripts": {
 		"build": "babel lib --presets es2015 --out-dir dist",
-		"test": "node test.js | tap-min",
+		"node-test": "node test/node.js | tap-min",
+		"browser-test": "browserify test/browser.js | chutney | tap-min",
+		"test": "npm run node-test && npm run browser-test",
 		"prepublishOnly": "npm run build && npm test"
 	}
 }
