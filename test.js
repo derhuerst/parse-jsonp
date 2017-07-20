@@ -2,7 +2,7 @@
 
 const test = require('tape')
 
-const todo = require('.')
+const parse = require('./dist')
 
-test('todo', (t) => {
+test('parse', (t) => {
 })
