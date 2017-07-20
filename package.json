@@ -1,0 +1,34 @@
+{
+	"name": "parse-jsonp",
+	"description": "Get the payload of a JSONP response.",
+	"version": "0.1.0",
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"jsonp",
+		"ajax",
+		"fetch",
+		"cors",
+		"fetch"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/parse-jsonp",
+	"repository": "derhuerst/parse-jsonp",
+	"bugs": "https://github.com/derhuerst/parse-jsonp/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+		"tape": "^4.6.3",
+		"tap-min": "^1.2.1"
+	},
+	"scripts": {
+		"test": "node test.js | tap-min",
+		"prepublishOnly": "npm test"
+	}
+}
