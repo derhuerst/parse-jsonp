@@ -23,7 +23,7 @@ const {fetch} = require('fetch-ponyfill')()
 const parse = require('parse-jsonp')
 
 fetch('some-JSONP-url.js')
-.then((res) => res.json())
+.then((res) => res.text())
 .then((jsonp) => parse('callback', jsonp))
 .then(console.log, console.error)
 ```

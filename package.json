@@ -1,7 +1,7 @@
 {
 	"name": "parse-jsonp",
 	"description": "Get the payload of a JSONP response.",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"main": "./dist/index.js",
 	"module": "./index.js",
 	"files": [
