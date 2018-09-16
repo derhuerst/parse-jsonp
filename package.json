@@ -41,7 +41,7 @@
 	"scripts": {
 		"build": "babel lib --presets @babel/preset-env --out-dir dist",
 		"node-test": "node test/node.js | tap-min",
-		"browser-test": "browserify -g [babelify --presets @babel/preset-env] test/browser.js | chutney | tap-min",
+		"browser-test": "browserify -g [ babelify --presets [@babel/preset-env] ] test/browser.js | chutney | tap-min",
 		"test": "npm run node-test && npm run browser-test",
 		"prepublishOnly": "npm run build && npm test"
 	}
