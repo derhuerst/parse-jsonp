@@ -1,9 +1,8 @@
-sudo: false
 language: node_js
 node_js:
   # don't run too many tests on Sauce Labs
   - 'stable'
-  - '6'
+  - '8'
 script:
   - npm run build
   - npm test
