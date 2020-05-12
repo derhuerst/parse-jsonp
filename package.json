@@ -1,48 +1,52 @@
 {
-	"name": "parse-jsonp",
-	"description": "Get the payload of a JSONP response.",
-	"version": "2.0.0",
-	"main": "./dist/index.js",
-	"module": "./index.js",
-	"files": [
-		"index.js",
-		"lib",
-		"dist"
-	],
-	"keywords": [
-		"jsonp",
-		"ajax",
-		"fetch",
-		"cors",
-		"fetch"
-	],
-	"author": "Jannis R <mail@jannisr.de>",
-	"homepage": "https://github.com/derhuerst/parse-jsonp",
-	"repository": "derhuerst/parse-jsonp",
-	"bugs": "https://github.com/derhuerst/parse-jsonp/issues",
-	"license": "ISC",
-	"engines": {
-		"node": ">=8"
-	},
-	"dependencies": {
-		"global": "^4.3.2"
-	},
-	"devDependencies": {
-		"@babel/cli": "^7.0.0",
-		"@babel/core": "^7.0.1",
-		"@babel/preset-env": "^7.0.0",
-		"babelify": "^10.0.0",
-		"browserify": "^16.0.0",
-		"chutney": "^1.0.0",
-		"is-in-browser": "^1.1.3",
-		"tap-min": "^2.0.0",
-		"tape": "^4.7.0"
-	},
-	"scripts": {
-		"build": "babel lib --presets @babel/preset-env --out-dir dist",
-		"node-test": "node test/node.js | tap-min",
-		"browser-test": "browserify -g [ babelify --presets [@babel/preset-env] ] test/browser.js | chutney | tap-min",
-		"test": "npm run node-test && npm run browser-test",
-		"prepublishOnly": "npm run build && npm test"
-	}
+  "name": "parse-jsonp",
+  "description": "Get the payload of a JSONP response.",
+  "version": "2.0.0",
+  "main": "./dist/index.js",
+  "module": "./index.js",
+  "files": [
+    "index.js",
+    "lib",
+    "dist"
+  ],
+  "keywords": [
+    "jsonp",
+    "ajax",
+    "fetch",
+    "cors",
+    "fetch"
+  ],
+  "author": "Jannis R <mail@jannisr.de>",
+  "homepage": "https://github.com/derhuerst/parse-jsonp",
+  "repository": "derhuerst/parse-jsonp",
+  "bugs": "https://github.com/derhuerst/parse-jsonp/issues",
+  "license": "ISC",
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "global": "^4.3.2",
+    "snyk": "^1.320.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.1",
+    "@babel/preset-env": "^7.0.0",
+    "babelify": "^10.0.0",
+    "browserify": "^16.0.0",
+    "chutney": "^1.0.0",
+    "is-in-browser": "^1.1.3",
+    "tap-min": "^2.0.0",
+    "tape": "^4.7.0"
+  },
+  "scripts": {
+    "build": "babel lib --presets @babel/preset-env --out-dir dist",
+    "node-test": "node test/node.js | tap-min",
+    "browser-test": "browserify -g [ babelify --presets [@babel/preset-env] ] test/browser.js | chutney | tap-min",
+    "test": "npm run node-test && npm run browser-test",
+    "prepublishOnly": "npm run build && npm test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
